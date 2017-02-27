@@ -35,17 +35,20 @@ public class QuickSort {
 		for (int j = low; j <= high - 1; j++) {
 			if (a[j].compareTo(base) < 0) {
 				i++;
-				T t = a[j];
-				a[j] = a[i];
-				a[i] = t;
+				swap(a, i, j);
 			}
 		}
 
 		i++;
-		a[high] = a[i];
-		a[i] = base;
+		swap(a, i, high);
 
 		return i;
+	}
+	
+	private <T extends Comparable<T>> void swap(T[] a, int i, int j) {
+		T t = a[i];
+		a[i] = a[j];
+		a[j] = t;
 	}
 
 	@Test
