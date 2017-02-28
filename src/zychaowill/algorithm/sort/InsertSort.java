@@ -1,4 +1,4 @@
-package zychaowill.sort;
+package zychaowill.algorithm.sort;
 
 import org.junit.Test;
 
