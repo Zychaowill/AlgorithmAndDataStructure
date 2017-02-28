@@ -28,6 +28,10 @@ public class BinarySearchTreeTest {
 		int max = searchTree.findMax();
 		System.out.println("max: " + max);
 		searchTree.preOrder(searchTree.getRoot());
+		System.out.println();
+		
+		// 中序遍历
+		searchTree.suffixOrder(searchTree.getRoot());
 	}
 
 }

@@ -55,11 +55,39 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
 		root = insert(key, root);
 	}
 
+	/**
+	 * 先序遍历
+	 * @param node
+	 */
 	public void preOrder(Node<T> node) {
 		if (node != null) {
 			System.out.print(node.data + "\t");
 			preOrder(node.left);
 			preOrder(node.right);
+		}
+	}
+	
+	/**
+	 * 中序遍历
+	 * @param node
+	 */
+	public void suffixOrder(Node<T> node) {
+		if (node != null) {
+			suffixOrder(node.left);
+			System.out.print(node.data + "\t");
+			suffixOrder(node.right);
+		}
+	}
+	
+	/**
+	 * 后序遍历
+	 * @param node
+	 */
+	public void postOrder(Node<T> node) {
+		if (node != null) {
+			postOrder(node.left);
+			postOrder(node.right);
+			System.out.print(node.data + "\t");
 		}
 	}
 
