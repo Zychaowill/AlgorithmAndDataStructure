@@ -1,9 +1,32 @@
 package zychaowill.algorithm.sort;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
 public class InsertSort {
 
+	/**
+	 * Simple insert sort algorithm.
+	 * 最差时间复杂度: O(n^2)；最有时间复杂度: O(n)；平均时间复杂度: O(n^2)
+	 * 最差空间复杂度: O(n)，需要辅助空间度: O(1)
+	 * @param a
+	 * @return 
+	 */
+	public <T extends Comparable<? super T>> void insertSort(T[] a) {
+		int j;
+		
+		for (int i = 1; i < a.length; i++) {
+			T t = a[i];
+			
+			for (j = i; j > 0 && t.compareTo(a[j - 1]) < 0; j--) {
+				a[j] = a[j - 1];
+			}
+			a[j] = t;
+			System.out.println(Arrays.toString(a));
+		}
+	}
+	
 	/**
 	 * Directly insert sort algorithm.
 	 * 
@@ -95,21 +118,28 @@ public class InsertSort {
 	}
 
 	@Test
-	private void directInsertSortTest() {
+	public void insertSortTest() {
+		Integer[] a = new Integer[] { 8, 3, 2, 1, 7, 4, 6, 5 };
+		insertSort(a);
+		printArray("简单插入: ", a);
+	}
+	
+	@Test
+	public void directInsertSortTest() {
 		Integer[] a = new Integer[] { 8, 3, 2, 1, 7, 4, 6, 5 };
 		directInsertSort(a);
 		printArray("直接插入: ", a);
 	}
 
 	@Test
-	private void binaryInsertSortTest() {
+	public void binaryInsertSortTest() {
 		Integer[] a = new Integer[] { 8, 3, 2, 1, 7, 4, 6, 5 };
 		binaryInsertSort(a);
 		printArray("折半插入: ", a);
 	}
 
 	@Test
-	private void shellSortTest() {
+	public void shellSortTest() {
 		Integer[] a = new Integer[] { 8, 3, 2, 1, 7, 4, 6, 5 };
 		shellSort(a);
 		printArray("希尔排序: ", a);
