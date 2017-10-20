@@ -30,7 +30,7 @@
     return i + 1
   ```
 
-- 代码实现: [快速排序代码实现](https://github.com/Zychaowill/AlgorithmAndDataStructure/blob/master/src/zychaowill/algorithm/sort/QuickSort.java)
+- 代码实现: [快速排序代码实现](https://github.com/Zychaowill/AlgorithmAndDataStructure/blob/master/src/main/java/zychaowill/algorithm/sort/QuickSort.java)
 
 ## 插入排序算法
 
@@ -40,4 +40,4 @@
 
 - 希尔排序
 
-- 代码实现: [插入排序代码实现](https://github.com/Zychaowill/AlgorithmAndDataStructure/blob/master/src/zychaowill/algorithm/sort/InsertSort.java)
+- 代码实现: [插入排序代码实现](https://github.com/Zychaowill/AlgorithmAndDataStructure/blob/master/src/main/java/zychaowill/algorithm/sort/InsertSort.java)
