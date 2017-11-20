@@ -160,12 +160,14 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
 	 * @return
 	 */
 	public Node<T> findMax(Node<T> node) {
-		if (node != null) {
-			while (node.right != null) {
-				node = node.right;
+		Node<T> iterNode = node;
+		
+		if (iterNode != null) {
+			while (iterNode.right != null) {
+				iterNode = iterNode.right;
 			}
 		}
-		return node;
+		return iterNode;
 	}
 
 	/**
