@@ -5,17 +5,24 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+import zychaowill.datastructure.graph.algo.ShortestPathStrategy;
+
 public class Graph {
 	/*
 	 * 顶点
 	 */
-	private List<Vertex> vertexs;
+	private final List<Vertex> vertexs;
 
 	/*
 	 * 边
 	 */
-	private int[][] edges;
+	private final int[][] edges;
 
+	/**
+	 * 求最短路径的策略
+	 */
+	private ShortestPathStrategy shortestPathStrategy;
+	
 	/*
 	 * 没有访问的顶点
 	 */
@@ -139,5 +146,29 @@ public class Graph {
 			}
 			System.out.println();
 		}
+	}
+
+	/**
+	 * Get shortest path from v
+	 * @see
+	 * @param v
+	 */
+	public void getShortestPath(Vertex v) {
+		shortestPathStrategy.shortestPath(this, v).printResult();
+	}
+
+	/**
+	 * Export access method 
+	 */
+	public void setShortestPathStrategy(ShortestPathStrategy shortestPathStrategy) {
+		this.shortestPathStrategy = shortestPathStrategy;
+	}
+
+	public List<Vertex> getVertexs() {
+		return vertexs;
+	}
+
+	public int[][] getEdges() {
+		return edges;
 	}
 }

@@ -30,7 +30,7 @@ public class Vertex implements Comparable<Vertex> {
 
 	@Override
 	public int compareTo(Vertex o) {
-		return o.path > path ? -1 : 1;
+		return path < o.path ? 1 : -1;
 	}
 
 	public String getName() {
