@@ -11,27 +11,29 @@ public class DijkstraShortestPath {
 
 	public static void main(String[] args) {
 		List<Vertex> vertexs = new ArrayList<Vertex>();
-		Vertex a = new Vertex("A", 0);
-		Vertex b = new Vertex("B");
-		Vertex c = new Vertex("C");
-		Vertex d = new Vertex("D");
-		Vertex e = new Vertex("E");
-		Vertex f = new Vertex("F");
+		Vertex a = new Vertex("0", 0);
+		Vertex b = new Vertex("1");
+		Vertex c = new Vertex("2");
+		Vertex d = new Vertex("3");
+		Vertex e = new Vertex("4");
+		Vertex f = new Vertex("5");
+		Vertex g = new Vertex("6");
 		vertexs.add(a);
 		vertexs.add(b);
 		vertexs.add(c);
 		vertexs.add(d);
 		vertexs.add(e);
 		vertexs.add(f);
-		int[][] edges = { { Integer.MAX_VALUE, 6, 3, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE },
-				{ 6, Integer.MAX_VALUE, 2, 5, Integer.MAX_VALUE, Integer.MAX_VALUE },
-				{ 3, 2, Integer.MAX_VALUE, 3, 4, Integer.MAX_VALUE },
-				{ Integer.MAX_VALUE, 5, 3, Integer.MAX_VALUE, 5, 3 },
-				{ Integer.MAX_VALUE, Integer.MAX_VALUE, 4, 5, Integer.MAX_VALUE, 5 },
-				{ Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, 3, 5, Integer.MAX_VALUE }
-
+		vertexs.add(g);
+		int[][] edges = { { 0, 4, 6, 6, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE },
+				{ Integer.MAX_VALUE, 0, 1, Integer.MAX_VALUE, 7, Integer.MAX_VALUE, Integer.MAX_VALUE },
+				{ Integer.MAX_VALUE, Integer.MAX_VALUE, 0, Integer.MAX_VALUE, 6, 4, Integer.MAX_VALUE },
+				{ Integer.MAX_VALUE, Integer.MAX_VALUE, 2, 0, Integer.MAX_VALUE, 5, Integer.MAX_VALUE },
+				{ Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, 0, Integer.MAX_VALUE, 6 },
+				{ Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, 1, 0, 8 },
+				{ Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE }
 		};
-		
+
 		Graph graph = new Graph(vertexs, edges);
 		graph.setShortestPathStrategy(new Dijkstra());
 		graph.getShortestPath(a);
