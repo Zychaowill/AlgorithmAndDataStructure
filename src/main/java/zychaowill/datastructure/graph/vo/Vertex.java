@@ -2,7 +2,7 @@ package zychaowill.datastructure.graph.vo;
 
 public class Vertex implements Comparable<Vertex> {
 	/**
-	 * 节点名称(A,B,C,D)
+	 * 
 	 */
 	private String name;
 
@@ -30,7 +30,7 @@ public class Vertex implements Comparable<Vertex> {
 
 	@Override
 	public int compareTo(Vertex o) {
-		return path < o.path ? 1 : -1;
+		return o.path > path ? -1 : 1;
 	}
 
 	public String getName() {

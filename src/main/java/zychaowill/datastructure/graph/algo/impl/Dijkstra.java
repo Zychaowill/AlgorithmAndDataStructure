@@ -13,12 +13,14 @@ public class Dijkstra extends AbstractShortestPathStrategy {
 	public ShortestResult shortestPath(Graph graph, Vertex v) {
 		init(graph, v);
 		
+		Vertex w;
 		while (!U.isEmpty()) {
-			List<Vertex> neighbors = getNeighbors(v);
-			updateDistance(v, neighbors);
+			w = U.element();
+			List<Vertex> neighbors = getNeighbors(w);
+			updateDistance(w, neighbors);
 			S.add(U.poll());
 		}
 		
-		return new ShortestResult(S);
+		return new ShortestResult(S, getShortestPathLength());
 	}
 }

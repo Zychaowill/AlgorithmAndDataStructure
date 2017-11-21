@@ -7,17 +7,22 @@ import zychaowill.datastructure.graph.vo.Vertex;
 public class ShortestResult {
 
 	Queue<Vertex> vertexs;
+	int path;
 
-	public ShortestResult(Queue<Vertex> vertexs) {
+	public ShortestResult(Queue<Vertex> vertexs, int path) {
 		this.vertexs = vertexs;
+		this.path = path;
 	}
 
 	public void printResult() {
-		int path = 0;
-		for (Vertex vertex : vertexs) {
-			path += vertex.getPath();
+		final String separator = " -> ";
+		StringBuilder builder = new StringBuilder("");
+		
+		while (!vertexs.isEmpty()) {
+			builder.append(vertexs.poll().getName() + separator);
 		}
-		System.out.println("\n shortest path length: " + path);
-		vertexs.stream().forEach(x -> System.out.print(x.getName() + "\t"));
+		
+		String shortestPath = builder.substring(0, builder.lastIndexOf(separator));
+		System.out.println(shortestPath + ", length: " + path);
 	}
 }

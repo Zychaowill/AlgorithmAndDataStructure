@@ -3,6 +3,7 @@ package zychaowill.datastructure.graph.algo;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.Queue;
 
 import zychaowill.datastructure.graph.vo.Graph;
@@ -11,11 +12,26 @@ import zychaowill.datastructure.graph.vo.Vertex;
 public abstract class AbstractShortestPathStrategy implements ShortestPathStrategy {
 
 	protected final int MAX_VALUE = Integer.MAX_VALUE;
-	protected List<Vertex> vertexs;
-	protected int[][] edges;
+	protected List<Vertex> vertexs; // all vertexs of graph
+	protected int[][] edges; // weight between two vertexs
 	protected Queue<Vertex> S;
 	protected Queue<Vertex> U;
 
+	/**
+	 * get shortest path length
+	 * @see
+	 * @return
+	 */
+	protected int getShortestPathLength() {
+		int path = 0;
+		List<Vertex> list = new ArrayList<>(S);
+		for (int i = 1; i < list.size(); i++) {
+			path += getDistance(list.get(i - 1), list.get(i));
+		}
+		
+		return path;
+	}
+	
 	/*
 	 * 获取顶点所有(未访问的)邻居
 	 */
@@ -33,9 +49,12 @@ public abstract class AbstractShortestPathStrategy implements ShortestPathStrate
 			distance = edges[position][i];
 			if (distance < MAX_VALUE) {
 				neighbor = vertexs.get(i);
-				neighbors.add(neighbor);
+				if (U.contains(neighbor)) {
+					neighbors.add(neighbor);
+				}
 			}
 		}
+		
 		return neighbors;
 	}
 
@@ -80,9 +99,20 @@ public abstract class AbstractShortestPathStrategy implements ShortestPathStrate
 	protected void init(Graph graph, Vertex v) {
 		this.vertexs = graph.getVertexs();
 		this.edges = graph.getEdges();
+		
+		initUnVisited();
+		
 		S = new LinkedList<>();
-		S.add(v);
-		U = new LinkedList<>(graph.getVertexs());
-		U.remove(v);
+	}
+	
+	/**
+	 * 初始化未访问顶点集合
+	 * @see
+	 */
+	private void initUnVisited() {
+		U = new PriorityQueue<>();
+		for (Vertex v : vertexs) {
+			U.add(v);
+		}
 	}
 }

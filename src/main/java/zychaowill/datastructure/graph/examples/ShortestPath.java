@@ -32,6 +32,5 @@ public class ShortestPath {
 		};
 		Graph graph = new Graph(vertexs, edges);
 		graph.printGraph();
-		graph.search();
 	}
 }

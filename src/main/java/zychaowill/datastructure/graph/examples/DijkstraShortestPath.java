@@ -27,8 +27,8 @@ public class DijkstraShortestPath {
 		vertexs.add(g);
 		int[][] edges = { { 0, 4, 6, 6, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE },
 				{ Integer.MAX_VALUE, 0, 1, Integer.MAX_VALUE, 7, Integer.MAX_VALUE, Integer.MAX_VALUE },
-				{ Integer.MAX_VALUE, Integer.MAX_VALUE, 0, Integer.MAX_VALUE, 6, 4, Integer.MAX_VALUE },
-				{ Integer.MAX_VALUE, Integer.MAX_VALUE, 2, 0, Integer.MAX_VALUE, 5, Integer.MAX_VALUE },
+				{ Integer.MAX_VALUE, Integer.MAX_VALUE, 0, 2, 6, 4, Integer.MAX_VALUE },
+				{ Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, 0, Integer.MAX_VALUE, 5, Integer.MAX_VALUE },
 				{ Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, 0, Integer.MAX_VALUE, 6 },
 				{ Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, 1, 0, 8 },
 				{ Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE }
