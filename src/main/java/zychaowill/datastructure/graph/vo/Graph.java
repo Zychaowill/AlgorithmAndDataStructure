@@ -52,6 +52,10 @@ public class Graph {
 	public void getShortestPath(Vertex v) {
 		shortestPathStrategy.shortestPath(this, v).printResult();
 	}
+	
+	public void getShortestPath() {
+		shortestPathStrategy.shortestPath(this, null).printAllResult();
+	}
 
 	/**
 	 * Export access method 
