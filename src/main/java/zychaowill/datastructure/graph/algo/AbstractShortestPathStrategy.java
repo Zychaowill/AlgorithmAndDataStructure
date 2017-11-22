@@ -96,7 +96,7 @@ public abstract class AbstractShortestPathStrategy implements ShortestPathStrate
 	/**
 	 * 初始化
 	 */
-	protected void init(Graph graph, Vertex v) {
+	protected void init(Graph graph) {
 		this.vertexs = graph.getVertexs();
 		this.edges = graph.getEdges();
 		

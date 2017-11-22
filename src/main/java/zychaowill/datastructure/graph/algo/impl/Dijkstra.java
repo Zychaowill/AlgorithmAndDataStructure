@@ -11,7 +11,7 @@ public class Dijkstra extends AbstractShortestPathStrategy {
 
 	@Override
 	public ShortestResult shortestPath(Graph graph, Vertex v) {
-		init(graph, v);
+		init(graph);
 		
 		Vertex w;
 		while (!U.isEmpty()) {
