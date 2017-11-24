@@ -1,4 +1,4 @@
-package zychaowill.algorithm.newsort;
+package zychaowill.algorithm.newsort.quick.simple;
 
 import java.util.Arrays;
 
