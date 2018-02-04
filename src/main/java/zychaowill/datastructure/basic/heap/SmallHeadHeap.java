@@ -262,7 +262,7 @@ public class SmallHeadHeap<E> implements Serializable {
 			int leftIndex = (k << 1) + 1;
 			Object leftNode = elements[leftIndex];
 			int rightIndex = leftIndex + 1;
-			if (comparator.compare((E) leftNode, (E) elements[rightIndex]) > 0)
+			if (rightIndex < size && comparator.compare((E) leftNode, (E) elements[rightIndex]) > 0)
 				leftNode = elements[leftIndex = rightIndex];
 			if (comparator.compare(e, (E) leftNode) <= 0)
 				break;
