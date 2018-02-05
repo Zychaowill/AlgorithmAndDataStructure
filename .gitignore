@@ -22,3 +22,10 @@
 hs_err_pid*
 /bin/
 /target/
+/target/*
+
+/.settings/*
+.classpath
+.iml
+/.idea/*
+.project
