@@ -38,7 +38,7 @@
 
 - 代码实现: [快速排序代码实现](https://github.com/Zychaowill/AlgorithmAndDataStructure/blob/master/src/main/java/zychaowill/algorithm/sort/QuickSort.java)
 
-## 插入排序算法
+### 插入排序算法
 
 - 直接插入排序
 
