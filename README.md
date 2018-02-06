@@ -1,7 +1,13 @@
 # AlgorithmAndDataStructure
 算法与数据结构记录
 
-## 快速排序算法
+### Heap
+
+- [MinHeadHeap](https://github.com/Zychaowill/AlgorithmAndDataStructure/tree/master/src/main/java/zychaowill/datastructure/basic/heap)
+
+- [HeapSort](https://github.com/Zychaowill/AlgorithmAndDataStructure/tree/master/src/main/java/zychaowill/algorithm/newsort/heap)
+
+### 快速排序算法
 
 - 时间复杂度（nlog2(n)）
 
