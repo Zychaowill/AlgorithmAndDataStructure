@@ -5,7 +5,7 @@
 
 ### Heap
 
-- [MinHeadHeap](https://github.com/Zychaowill/AlgorithmAndDataStructure/tree/master/src/main/java/zychaowill/datastructure/basic/heap)
+- [SmallHeadHeap](https://github.com/Zychaowill/AlgorithmAndDataStructure/tree/master/src/main/java/zychaowill/datastructure/basic/heap)
 
 - [HeapSort](https://github.com/Zychaowill/AlgorithmAndDataStructure/tree/master/src/main/java/zychaowill/algorithm/newsort/heap)
 
