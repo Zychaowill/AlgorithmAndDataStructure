@@ -1,5 +1,11 @@
 package zychaowill.algorithm.classical;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
+
 import zychaowill.algorithm.classical.util.NumberFactory;
 
 /**
@@ -8,15 +14,16 @@ import zychaowill.algorithm.classical.util.NumberFactory;
 public class FindRepeatElement {
 
     public static void main(String[] args) {
-        int[] array = new int[101];
-        System.arraycopy(NumberFactory.randomInt(100), 0, array, 0, 100);
-
+        int[] array = intArray(101);
+        array[array.length - 1] = getRepeatElement();
+        
+        array = shuffle(array);
         print(array);
+        
         int sum = sum(array);
         for (int i = 0; i < array.length - 1; i++) {
             sum -= array[i];
         }
-
         System.out.printf("The repeat element is %d.\n", sum);
     }
 
@@ -31,11 +38,31 @@ public class FindRepeatElement {
     private static void print(int[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + "\t");
-            if (i % 10 == 0) {
+            if ((i + 1) % 10 == 0) {
                 System.out.println();
-                break;
             }
         }
         System.out.println();
+    }
+    
+    private static int getRepeatElement() {
+        Random random = new Random();
+        int element = random.nextInt(100);
+        System.out.printf("Getting repeat element is %d.\n", element);
+        return element;
+    }
+    
+    private static int[] intArray(int size) {
+    	int[] array = new int[size];
+        System.arraycopy(NumberFactory.randomInt(size - 1), 0, array, 0, 0 + array.length - 1);
+        return array;
+    }
+    
+    private static int[] shuffle(int[] array) {
+    	List<Integer> list = Arrays.stream(array).boxed().collect(Collectors.toList());
+    	Integer last = list.remove(list.size() - 1);
+    	Collections.shuffle(list);
+    	list.add(last);
+    	return list.stream().mapToInt(x -> x).toArray();
     }
 }
