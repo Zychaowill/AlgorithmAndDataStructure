@@ -1,13 +1,13 @@
-package zychaowill.datastructure.research;
+package zychaowill.algorithm.research;
 
 import java.util.LinkedList;
 import java.util.Objects;
 import java.util.Queue;
 
-import zychaowill.datastructure.research.entity.pet.Cat;
-import zychaowill.datastructure.research.entity.pet.Dog;
-import zychaowill.datastructure.research.entity.pet.Pet;
-import zychaowill.datastructure.research.entity.pet.PetType;
+import zychaowill.algorithm.research.entity.pet.Cat;
+import zychaowill.algorithm.research.entity.pet.Dog;
+import zychaowill.algorithm.research.entity.pet.Pet;
+import zychaowill.algorithm.research.entity.pet.PetType;
 
 public class CatAndDogQueue {
 	private Queue<PetWrapper> catQueue;

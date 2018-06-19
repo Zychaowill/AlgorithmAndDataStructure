@@ -1,4 +1,4 @@
-package zychaowill.datastructure.research;
+package zychaowill.algorithm.research;
 
 import java.util.LinkedList;
 

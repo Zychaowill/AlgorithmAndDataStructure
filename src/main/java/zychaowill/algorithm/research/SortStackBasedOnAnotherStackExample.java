@@ -1,8 +1,8 @@
-package zychaowill.datastructure.research;
+package zychaowill.algorithm.research;
 
 import java.util.Stack;
 
-import zychaowill.datastructure.research.utils.PrintlnUtils;
+import zychaowill.algorithm.research.utils.PrintlnUtils;
 
 public class SortStackBasedOnAnotherStackExample {
 	

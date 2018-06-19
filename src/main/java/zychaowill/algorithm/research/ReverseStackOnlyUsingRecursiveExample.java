@@ -1,4 +1,4 @@
-package zychaowill.datastructure.research;
+package zychaowill.algorithm.research;
 
 import java.util.Stack;
 import java.util.stream.Collectors;

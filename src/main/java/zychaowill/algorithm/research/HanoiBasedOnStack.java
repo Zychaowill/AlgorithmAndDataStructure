@@ -1,4 +1,4 @@
-package zychaowill.datastructure.research;
+package zychaowill.algorithm.research;
 
 /**
  * Required: must move element relied on middle element. 

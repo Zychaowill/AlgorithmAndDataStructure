@@ -1,4 +1,4 @@
-package zychaowill.datastructure.research.entity.pet;
+package zychaowill.algorithm.research.entity.pet;
 
 public class Pet {
 	private PetType type;
