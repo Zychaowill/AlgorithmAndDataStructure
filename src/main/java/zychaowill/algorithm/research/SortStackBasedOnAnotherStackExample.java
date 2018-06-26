@@ -2,7 +2,7 @@ package zychaowill.algorithm.research;
 
 import java.util.Stack;
 
-import zychaowill.algorithm.research.utils.PrintlnUtils;
+import zychaowill.algorithm.util.PrintlnUtils;
 
 public class SortStackBasedOnAnotherStackExample {
 	
