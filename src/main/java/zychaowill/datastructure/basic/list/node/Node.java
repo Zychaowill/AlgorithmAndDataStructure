@@ -1,11 +1,18 @@
 package zychaowill.datastructure.basic.list.node;
 
-public class Node {
-	public int value;
-	public Node next;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-	public Node(int value) {
-		this.value = value;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Node<T> {
+	public T data;
+	public Node<T> next;
+
+	public Node(T data) {
+		this.data = data;
 	}
 
 }

@@ -1,14 +1,21 @@
 package zychaowill.datastructure.basic.list.node;
 
-public class DoubleNode {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-	public int value;
-	public DoubleNode pre;
-	public DoubleNode next;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class DoubleNode<T> {
 
-	public DoubleNode(int value) {
+	public DoubleNode<T> pre;
+	public T data;
+	public DoubleNode<T> next;
+
+	public DoubleNode(T data) {
 		super();
-		this.value = value;
+		this.data = data;
 	}
 
 }

@@ -1,18 +1,20 @@
 package zychaowill.datastructure.basic.list;
 
+import zychaowill.datastructure.basic.list.node.DoubleNode;
+
 public class DoubleLinkList<T> implements LinearTable<T> {
 
-	private Node<T> head;
-	private Node<T> tail;
+	private DoubleNode<T> head;
+	private DoubleNode<T> tail;
 	private int size;
 
 	public DoubleLinkList() {
-		this.head = new Node<T>();
+		this.head = new DoubleNode<>();
 		this.tail = null;
 	}
 
 	public DoubleLinkList(T data) {
-		this.head = new Node<>(null, data, null);
+		this.head = new DoubleNode<>(null, data, null);
 		this.tail = this.head;
 		this.size++;
 	}
@@ -29,24 +31,24 @@ public class DoubleLinkList<T> implements LinearTable<T> {
 
 	@Override
 	public T get(int index) {
-		return getNode(index).data;
+		return getDoubleNode(index).data;
 	}
 	
-	private Node<T> getNode(int index) {
+	private DoubleNode<T> getDoubleNode(int index) {
 		if (index < 0 || index > this.size - 1) {
 			throw new IndexOutOfBoundsException("访问位置非法越界!");
 		}
 		
 		if (index <= this.size / 2) {
 			
-			Node<T> current = this.head;
+			DoubleNode<T> current = this.head;
 			for (int i = 0; i <= this.size / 2 && current != null; i++, current = current.next) {
 				if (i == index) {
 					return current;
 				}
 			}
 		} else {
-			Node<T> current = this.tail;
+			DoubleNode<T> current = this.tail;
 			for (int i = this.size - 1; i > this.size / 2 && current != null; i--, current = current.pre) {
 				if (i == index) {
 					return current;
@@ -59,12 +61,12 @@ public class DoubleLinkList<T> implements LinearTable<T> {
 
 	@Override
 	public T set(int index, T element) {
-		Node<T> node = getNode(index);
+		DoubleNode<T> DoubleNode = getDoubleNode(index);
 		T t = null;
 		
-		if (node != null) {
-			t = node.data;
-			node.data = element;
+		if (DoubleNode != null) {
+			t = DoubleNode.data;
+			DoubleNode.data = element;
 		}
 		
 		return t;
@@ -72,9 +74,9 @@ public class DoubleLinkList<T> implements LinearTable<T> {
 
 	@Override
 	public boolean addToHead(T element) {
-		Node<T> node = new Node<T>(null, element, null);
-		head.pre = node;
-		head = node;
+		DoubleNode<T> DoubleNode = new DoubleNode<T>(null, element, null);
+		head.pre = DoubleNode;
+		head = DoubleNode;
 		
 		if (tail == null) {
 			tail = head;
@@ -86,10 +88,10 @@ public class DoubleLinkList<T> implements LinearTable<T> {
 	@Override
 	public boolean addToTail(T element) {
 		if (head == null) {
-			head = new Node<T>(null, element, null);
+			head = new DoubleNode<T>(null, element, null);
 			tail = head;
 		} else {
-			Node<T> node = new Node<T>(tail, element, null);
+			DoubleNode<T> DoubleNode = new DoubleNode<T>(tail, element, null);
 		}
 		return false;
 	}
@@ -112,21 +114,5 @@ public class DoubleLinkList<T> implements LinearTable<T> {
 	@Override
 	public boolean removeTail() {
 		return false;
-	}
-
-	class Node<T> {
-		private T data;
-		private Node<T> pre;
-		private Node<T> next;
-
-		public Node() {
-		}
-
-		public Node(Node<T> pre, T data, Node<T> next) {
-			this.data = data;
-			this.pre = pre;
-			this.next = next;
-		}
-
 	}
 }
