@@ -9,6 +9,8 @@
 
 - [HeapSort](https://github.com/Zychaowill/AlgorithmAndDataStructure/tree/master/src/main/java/zychaowill/algorithm/newsort/heap)
 
+### [Dynamic Programming](https://github.com/Zychaowill/AlgorithmAndDataStructure/tree/master/src/main/java/zychaowill/algorithm/dynamic)
+
 ### 快速排序算法
 
 - 时间复杂度（nlog2(n)）
