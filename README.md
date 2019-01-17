@@ -1,15 +1,15 @@
 # AlgorithmAndDataStructure
 算法与数据结构记录
 
-### [Red and Black Tree](https://github.com/Zychaowill/AlgorithmAndDataStructure/tree/master/src/main/java/zychaowill/datastructure/basic/tree/rb)
+### [Red and Black Tree](https://github.com/buildupchao/AlgorithmAndDataStructure/tree/master/src/main/java/com/buildupchao/datastructure/basic/tree/rb)
 
 ### Heap
 
-- [SmallHeadHeap](https://github.com/Zychaowill/AlgorithmAndDataStructure/tree/master/src/main/java/zychaowill/datastructure/basic/heap)
+- [SmallHeadHeap](https://github.com/buildupchao/AlgorithmAndDataStructure/tree/master/src/main/java/com/buildupchao/datastructure/basic/heap)
 
-- [HeapSort](https://github.com/Zychaowill/AlgorithmAndDataStructure/tree/master/src/main/java/zychaowill/algorithm/newsort/heap)
+- [HeapSort](https://github.com/buildupchao/AlgorithmAndDataStructure/tree/master/src/main/java/com/buildupchao/algorithm/newsort/heap)
 
-### [Dynamic Programming](https://github.com/Zychaowill/AlgorithmAndDataStructure/tree/master/src/main/java/zychaowill/algorithm/dynamic)
+### [Dynamic Programming](https://github.com/buildupchao/AlgorithmAndDataStructure/tree/master/src/main/java/com/buildupchao/algorithm/dynamic)
 
 ### 快速排序算法
 
@@ -40,7 +40,7 @@
     return i + 1
   ```
 
-- 代码实现: [快速排序代码实现](https://github.com/Zychaowill/AlgorithmAndDataStructure/blob/master/src/main/java/zychaowill/algorithm/sort/QuickSort.java)
+- 代码实现: [快速排序代码实现](https://github.com/buildupchao/AlgorithmAndDataStructure/blob/master/src/main/java/com/buildupchao/algorithm/sort/QuickSort.java)
 
 ### 插入排序算法
 
@@ -50,4 +50,4 @@
 
 - 希尔排序
 
-- 代码实现: [插入排序代码实现](https://github.com/Zychaowill/AlgorithmAndDataStructure/blob/master/src/main/java/zychaowill/algorithm/sort/InsertSort.java)
+- 代码实现: [插入排序代码实现](https://github.com/buildupchao/AlgorithmAndDataStructure/blob/master/src/main/java/com/buildupchao/algorithm/sort/InsertSort.java)
