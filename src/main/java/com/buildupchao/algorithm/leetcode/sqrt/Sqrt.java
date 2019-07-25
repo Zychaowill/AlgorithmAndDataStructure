@@ -1,4 +1,4 @@
-package com.buildupchao.algorithm.leetcode;
+package com.buildupchao.algorithm.leetcode.sqrt;
 
 import java.util.logging.Logger;
 
