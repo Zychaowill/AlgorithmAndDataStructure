@@ -1,0 +1,10 @@
+127.0.0.1:6379> BF.ADD myFilter java
+(integer) 1
+127.0.0.1:6379> BF.ADD myFilter javaguide
+(integer) 1
+127.0.0.1:6379> BF.EXISTS myFilter java
+(integer) 1
+127.0.0.1:6379> BF.EXISTS myFilter javaguide
+(integer) 1
+127.0.0.1:6379> BF.EXISTS myFilter github
+(integer) 0
