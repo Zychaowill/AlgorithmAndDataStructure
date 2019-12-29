@@ -1,7 +1,8 @@
 package com.buildupchao.datastructure.basic.tree.rb;
 
 /**
- * Created by yachao on 18/2/15.
+ * @author buildupchao
+ * @date 18/2/15.
  */
 public class RBNode {
     RBNode parent;
