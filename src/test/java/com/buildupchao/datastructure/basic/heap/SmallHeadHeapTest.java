@@ -1,4 +1,4 @@
-package com.buildupchao.datastructure.heap;
+package com.buildupchao.datastructure.basic.heap;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
