@@ -1,13 +1,17 @@
 package com.buildupchao.algorithm.leetcode.mergetwolist;
 
+import com.buildupchao.algorithm.leetcode.bean.ListNode;
+
 public class MergeTwoList {
 
 	public ListNode mergeTwoList(ListNode p, ListNode q) {
 
-		if (p == null)
+		if (p == null) {
 			return q;
-		if (q == null)
+		}
+		if (q == null) {
 			return p;
+		}
 		ListNode head = new ListNode(-1);
 		ListNode node = head;
 		

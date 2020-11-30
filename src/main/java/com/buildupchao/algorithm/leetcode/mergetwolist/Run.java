@@ -1,5 +1,7 @@
 package com.buildupchao.algorithm.leetcode.mergetwolist;
 
+import com.buildupchao.algorithm.leetcode.bean.ListNode;
+
 public class Run {
 	public static void main(String[] args) {
 		ListNode p = new ListNode(1);
